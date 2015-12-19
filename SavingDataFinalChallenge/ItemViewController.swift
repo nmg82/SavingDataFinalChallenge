@@ -10,25 +10,26 @@ import UIKit
 
 class ItemViewController: UIViewController {
 
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var descriptionTextView: UITextView!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  @IBOutlet weak var nameTextField: UITextField!
+  @IBOutlet weak var descriptionTextView: UITextView!
   
-    @IBAction func saveButtonPressed() {
-      print("saving data")
-      print(nameTextField.text)
-      print(descriptionTextView.text)
-      
-      self.navigationController?.popToRootViewControllerAnimated(true)
+  var itemToEdit: Item?
+  
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    if let itemToEdit = itemToEdit {
+      nameTextField.text = itemToEdit.name
+      descriptionTextView.text = itemToEdit.description
     }
+  }
+  
+  @IBAction func saveButtonPressed() {
+    let item = Item(name: nameTextField.text!, description: descriptionTextView.text)
+    let store = NSDataStore()
+
+    store.persist(item)
+    
+    self.navigationController?.popToRootViewControllerAnimated(true)
+  }
 }
