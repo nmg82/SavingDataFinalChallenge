@@ -16,6 +16,9 @@
 		DB7D1DC91C25AFB40022ADB4 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D1DC81C25AFB40022ADB4 /* ToDoTableViewController.swift */; };
 		DB7D1DCD1C25B7560022ADB4 /* NSDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D1DCC1C25B7560022ADB4 /* NSDataStore.swift */; };
 		DB7D1DD01C25B7E20022ADB4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D1DCF1C25B7E20022ADB4 /* Item.swift */; };
+		DBD6CB841C26129D006E3F17 /* PersistentStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD6CB831C26129D006E3F17 /* PersistentStoreProtocol.swift */; };
+		DBD6CB861C2612F9006E3F17 /* NSCodingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD6CB851C2612F9006E3F17 /* NSCodingStore.swift */; };
+		DBD6CB881C271561006E3F17 /* NSCodingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD6CB871C271561006E3F17 /* NSCodingItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		DB7D1DC81C25AFB40022ADB4 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
 		DB7D1DCC1C25B7560022ADB4 /* NSDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDataStore.swift; sourceTree = "<group>"; };
 		DB7D1DCF1C25B7E20022ADB4 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		DBD6CB831C26129D006E3F17 /* PersistentStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentStoreProtocol.swift; sourceTree = "<group>"; };
+		DBD6CB851C2612F9006E3F17 /* NSCodingStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSCodingStore.swift; sourceTree = "<group>"; };
+		DBD6CB871C271561006E3F17 /* NSCodingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSCodingItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				DB7D1DCC1C25B7560022ADB4 /* NSDataStore.swift */,
+				DBD6CB831C26129D006E3F17 /* PersistentStoreProtocol.swift */,
+				DBD6CB851C2612F9006E3F17 /* NSCodingStore.swift */,
 			);
 			name = Stores;
 			sourceTree = "<group>";
@@ -95,9 +103,18 @@
 		DB7D1DCE1C25B7D20022ADB4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DBD6CB891C27172F006E3F17 /* NSCoding */,
 				DB7D1DCF1C25B7E20022ADB4 /* Item.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		DBD6CB891C27172F006E3F17 /* NSCoding */ = {
+			isa = PBXGroup;
+			children = (
+				DBD6CB871C271561006E3F17 /* NSCodingItem.swift */,
+			);
+			name = NSCoding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,8 +189,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBD6CB841C26129D006E3F17 /* PersistentStoreProtocol.swift in Sources */,
+				DBD6CB881C271561006E3F17 /* NSCodingItem.swift in Sources */,
 				DB7D1DD01C25B7E20022ADB4 /* Item.swift in Sources */,
 				DB7D1DCD1C25B7560022ADB4 /* NSDataStore.swift in Sources */,
+				DBD6CB861C2612F9006E3F17 /* NSCodingStore.swift in Sources */,
 				1E1F78C91C24C48100282333 /* AppDelegate.swift in Sources */,
 				DB7D1DC91C25AFB40022ADB4 /* ToDoTableViewController.swift in Sources */,
 				1E1F78DB1C24CD4800282333 /* ItemViewController.swift in Sources */,
