@@ -26,7 +26,7 @@ class ItemViewController: UIViewController {
   
   @IBAction func saveButtonPressed() {
     let item = Item(name: nameTextField.text!, description: descriptionTextView.text)
-    let store = NSDataStore()
+    let store = NSCodingStore()
 
     store.persist(item)
     

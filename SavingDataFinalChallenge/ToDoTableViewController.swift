@@ -10,7 +10,7 @@ import UIKit
 
 class ToDoTableViewController: UITableViewController {
   private var items = [Item]()
-  private let persistentStore = NSDataStore()
+  private let persistentStore = NSCodingStore()
   
   override func viewWillAppear(animated: Bool) {
     super.viewDidAppear(animated)
