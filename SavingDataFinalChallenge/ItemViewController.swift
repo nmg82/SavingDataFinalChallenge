@@ -13,6 +13,8 @@ class ItemViewController: UIViewController {
   @IBOutlet weak var nameTextField: UITextField!
   @IBOutlet weak var descriptionTextView: UITextView!
   
+  private let persistentStore = PersistentStoreFactory.getPersistentStore()
+  
   var itemToEdit: Item?
   
   override func viewWillAppear(animated: Bool) {
@@ -26,9 +28,8 @@ class ItemViewController: UIViewController {
   
   @IBAction func saveButtonPressed() {
     let item = Item(name: nameTextField.text!, description: descriptionTextView.text)
-    let store = NSCodingStore()
 
-    store.persist(item)
+    persistentStore.persist(item)
     
     self.navigationController?.popToRootViewControllerAnimated(true)
   }

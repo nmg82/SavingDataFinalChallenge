@@ -10,15 +10,24 @@ import UIKit
 
 class ToDoTableViewController: UITableViewController {
   private var items = [Item]()
-  private let persistentStore = NSCodingStore()
+  private var persistentStore = PersistentStoreFactory.getPersistentStore()
   
   override func viewWillAppear(animated: Bool) {
     super.viewDidAppear(animated)
     
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "storeTypeChanged", name: NSUserDefaultsDidChangeNotification, object: nil)
+    
+    reloadData()
+  }
+  
+  private func reloadData() {
     items = persistentStore.getItems()
-    
     tableView.reloadData()
-    
+  }
+  
+  func storeTypeChanged() {
+    persistentStore = PersistentStoreFactory.getPersistentStore()
+    reloadData()
   }
   
   // MARK: - Table view data source
