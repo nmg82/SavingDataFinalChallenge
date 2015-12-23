@@ -16,7 +16,7 @@
 		1E97B4F01C29B5C6009C4564 /* PropertyListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E97B4EF1C29B5C6009C4564 /* PropertyListStore.swift */; };
 		DB7D1DC71C24E5400022ADB4 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DB7D1DC61C24E5400022ADB4 /* Settings.bundle */; };
 		DB7D1DC91C25AFB40022ADB4 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D1DC81C25AFB40022ADB4 /* ToDoTableViewController.swift */; };
-		DB7D1DCD1C25B7560022ADB4 /* NSDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D1DCC1C25B7560022ADB4 /* NSDataStore.swift */; };
+		DB7D1DCD1C25B7560022ADB4 /* StringStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D1DCC1C25B7560022ADB4 /* StringStore.swift */; };
 		DB7D1DD01C25B7E20022ADB4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D1DCF1C25B7E20022ADB4 /* Item.swift */; };
 		DBD6CB841C26129D006E3F17 /* PersistentStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD6CB831C26129D006E3F17 /* PersistentStoreProtocol.swift */; };
 		DBD6CB861C2612F9006E3F17 /* NSCodingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD6CB851C2612F9006E3F17 /* NSCodingStore.swift */; };
@@ -35,7 +35,7 @@
 		1E97B4EF1C29B5C6009C4564 /* PropertyListStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyListStore.swift; sourceTree = "<group>"; };
 		DB7D1DC61C24E5400022ADB4 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		DB7D1DC81C25AFB40022ADB4 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
-		DB7D1DCC1C25B7560022ADB4 /* NSDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDataStore.swift; sourceTree = "<group>"; };
+		DB7D1DCC1C25B7560022ADB4 /* StringStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringStore.swift; sourceTree = "<group>"; };
 		DB7D1DCF1C25B7E20022ADB4 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		DBD6CB831C26129D006E3F17 /* PersistentStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentStoreProtocol.swift; sourceTree = "<group>"; };
 		DBD6CB851C2612F9006E3F17 /* NSCodingStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSCodingStore.swift; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 			children = (
 				1E97B4ED1C28B260009C4564 /* PersistentStoreFactory.swift */,
 				DBD6CB831C26129D006E3F17 /* PersistentStoreProtocol.swift */,
-				DB7D1DCC1C25B7560022ADB4 /* NSDataStore.swift */,
+				DB7D1DCC1C25B7560022ADB4 /* StringStore.swift */,
 				DBD6CB851C2612F9006E3F17 /* NSCodingStore.swift */,
 				1E97B4EF1C29B5C6009C4564 /* PropertyListStore.swift */,
 			);
@@ -200,7 +200,7 @@
 				1E97B4F01C29B5C6009C4564 /* PropertyListStore.swift in Sources */,
 				DB7D1DD01C25B7E20022ADB4 /* Item.swift in Sources */,
 				1E97B4EE1C28B260009C4564 /* PersistentStoreFactory.swift in Sources */,
-				DB7D1DCD1C25B7560022ADB4 /* NSDataStore.swift in Sources */,
+				DB7D1DCD1C25B7560022ADB4 /* StringStore.swift in Sources */,
 				DBD6CB861C2612F9006E3F17 /* NSCodingStore.swift in Sources */,
 				1E1F78C91C24C48100282333 /* AppDelegate.swift in Sources */,
 				DB7D1DC91C25AFB40022ADB4 /* ToDoTableViewController.swift in Sources */,

@@ -15,7 +15,7 @@ class PersistentStoreFactory {
     
     switch selectedType {
     case 0:
-      return NSDataStore()
+      return StringStore()
     case 1:
       return NSCodingStore()
     case 2:

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct NSDataStore: PersistentStoreProtocol {
+struct StringStore: PersistentStoreProtocol {
   let fileManager = NSFileManager.defaultManager()
   
   func persist(item: Item) {

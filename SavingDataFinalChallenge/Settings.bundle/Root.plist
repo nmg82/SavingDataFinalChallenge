@@ -17,7 +17,7 @@
 			<integer>0</integer>
 			<key>Titles</key>
 			<array>
-				<string>NSData</string>
+				<string>String</string>
 				<string>NSCoding</string>
 				<string>Property List</string>
 				<string>XML</string>
