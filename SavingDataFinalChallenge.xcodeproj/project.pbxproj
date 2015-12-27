@@ -18,6 +18,8 @@
 		DB7D1DC91C25AFB40022ADB4 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D1DC81C25AFB40022ADB4 /* ToDoTableViewController.swift */; };
 		DB7D1DCD1C25B7560022ADB4 /* StringStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D1DCC1C25B7560022ADB4 /* StringStore.swift */; };
 		DB7D1DD01C25B7E20022ADB4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D1DCF1C25B7E20022ADB4 /* Item.swift */; };
+		DBBF2E051C2DD36B00FD77C1 /* XmlStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2E041C2DD36B00FD77C1 /* XmlStore.swift */; };
+		DBBF2E081C2DD71C00FD77C1 /* ItemParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2E071C2DD71C00FD77C1 /* ItemParser.swift */; };
 		DBD6CB841C26129D006E3F17 /* PersistentStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD6CB831C26129D006E3F17 /* PersistentStoreProtocol.swift */; };
 		DBD6CB861C2612F9006E3F17 /* NSCodingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD6CB851C2612F9006E3F17 /* NSCodingStore.swift */; };
 		DBD6CB881C271561006E3F17 /* NSCodingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD6CB871C271561006E3F17 /* NSCodingItem.swift */; };
@@ -37,6 +39,8 @@
 		DB7D1DC81C25AFB40022ADB4 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
 		DB7D1DCC1C25B7560022ADB4 /* StringStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringStore.swift; sourceTree = "<group>"; };
 		DB7D1DCF1C25B7E20022ADB4 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		DBBF2E041C2DD36B00FD77C1 /* XmlStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XmlStore.swift; sourceTree = "<group>"; };
+		DBBF2E071C2DD71C00FD77C1 /* ItemParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemParser.swift; sourceTree = "<group>"; };
 		DBD6CB831C26129D006E3F17 /* PersistentStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentStoreProtocol.swift; sourceTree = "<group>"; };
 		DBD6CB851C2612F9006E3F17 /* NSCodingStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSCodingStore.swift; sourceTree = "<group>"; };
 		DBD6CB871C271561006E3F17 /* NSCodingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSCodingItem.swift; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 				DB7D1DCC1C25B7560022ADB4 /* StringStore.swift */,
 				DBD6CB851C2612F9006E3F17 /* NSCodingStore.swift */,
 				1E97B4EF1C29B5C6009C4564 /* PropertyListStore.swift */,
+				DBBF2E041C2DD36B00FD77C1 /* XmlStore.swift */,
 			);
 			name = Stores;
 			sourceTree = "<group>";
@@ -109,10 +114,19 @@
 		DB7D1DCE1C25B7D20022ADB4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DBBF2E061C2DD70D00FD77C1 /* Xml */,
 				DBD6CB891C27172F006E3F17 /* NSCoding */,
 				DB7D1DCF1C25B7E20022ADB4 /* Item.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		DBBF2E061C2DD70D00FD77C1 /* Xml */ = {
+			isa = PBXGroup;
+			children = (
+				DBBF2E071C2DD71C00FD77C1 /* ItemParser.swift */,
+			);
+			name = Xml;
 			sourceTree = "<group>";
 		};
 		DBD6CB891C27172F006E3F17 /* NSCoding */ = {
@@ -198,7 +212,9 @@
 				DBD6CB841C26129D006E3F17 /* PersistentStoreProtocol.swift in Sources */,
 				DBD6CB881C271561006E3F17 /* NSCodingItem.swift in Sources */,
 				1E97B4F01C29B5C6009C4564 /* PropertyListStore.swift in Sources */,
+				DBBF2E081C2DD71C00FD77C1 /* ItemParser.swift in Sources */,
 				DB7D1DD01C25B7E20022ADB4 /* Item.swift in Sources */,
+				DBBF2E051C2DD36B00FD77C1 /* XmlStore.swift in Sources */,
 				1E97B4EE1C28B260009C4564 /* PersistentStoreFactory.swift in Sources */,
 				DB7D1DCD1C25B7560022ADB4 /* StringStore.swift in Sources */,
 				DBD6CB861C2612F9006E3F17 /* NSCodingStore.swift in Sources */,

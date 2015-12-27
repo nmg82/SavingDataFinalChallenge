@@ -20,6 +20,8 @@ class PersistentStoreFactory {
       return NSCodingStore()
     case 2:
       return PropertyListStore()
+    case 3:
+      return XmlStore()
     default:
       return NSCodingStore()
     }

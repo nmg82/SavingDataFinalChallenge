@@ -8,6 +8,7 @@
 
 import Foundation
 
+//rename to PersistentStore
 protocol PersistentStoreProtocol {
   func persist(item: Item)
   func getItems() -> [Item]
