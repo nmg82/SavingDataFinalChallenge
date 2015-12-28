@@ -43,7 +43,7 @@ extension ItemParser: NSXMLParserDelegate {
       currentItem?.name = xmlText.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
     }
     if elementName == "description" {
-      currentItem?.name = xmlText.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+      currentItem?.description = xmlText.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
     }
     if elementName == "item" {
       if let item = currentItem {

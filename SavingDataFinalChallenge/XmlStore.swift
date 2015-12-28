@@ -9,17 +9,46 @@
 import Foundation
 
 struct XmlStore: PersistentStoreProtocol {
+  private let saveFile: NSURL? = {
+    do {
+      let documentDirectory = try NSFileManager.defaultManager().URLForDirectory(.DocumentDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: false)
+      
+      return documentDirectory.URLByAppendingPathComponent("data.xml")
+    } catch {
+      print(error)
+      return nil
+    }
+  }()
+  
   func persist(item: Item) {
-    let documentDirectory = NSFileManager.defaultManager().URLForDirectory(.DocumentDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: false)
+    guard let saveFile = saveFile else {
+      return
+    }
     
-    let saveFile = documentDirectory.URLByAppendingPathComponent("data.xml")
+    var items = getItems()
+    items.append(item)
     
-    //parse item
-    
-    
+    let xmlString = ItemXmlGenerator.getXmlFromItems(items)
+    xmlString.dataUsingEncoding(NSUTF8StringEncoding)?.writeToURL(saveFile, atomically: true)
   }
   
   func getItems() -> [Item] {
-    return []
+    var items = [Item]()
+    
+    do {
+      guard let saveFile = saveFile where NSFileManager.defaultManager().fileExistsAtPath(saveFile.path!) else {
+        return items
+      }
+      
+      let xml = try String(contentsOfURL: saveFile)
+      let parser = ItemParser(withXml: xml)
+      
+      items = parser.parse()
+      
+    } catch {
+      print(error)
+    }
+    
+    return items
   }
 }
