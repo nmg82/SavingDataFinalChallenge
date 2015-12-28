@@ -9,7 +9,7 @@
 import Foundation
 
 class PersistentStoreFactory {
-  class func getPersistentStore() -> PersistentStoreProtocol {
+  class func getPersistentStore() -> PersistentStore {
     let defaults = NSUserDefaults.standardUserDefaults()
     let selectedType = defaults.integerForKey("persistentStoreType")
     

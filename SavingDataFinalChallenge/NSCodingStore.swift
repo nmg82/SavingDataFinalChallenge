@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct NSCodingStore: PersistentStoreProtocol {
+struct NSCodingStore: PersistentStore {
   private let saveFile: NSURL? = {
     do {
       let documentDirectory = try NSFileManager.defaultManager().URLForDirectory(.DocumentDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: false)
