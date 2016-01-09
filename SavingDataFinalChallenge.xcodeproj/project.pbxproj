@@ -16,6 +16,8 @@
 		1E8FC67E1C31E13300998540 /* JsonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8FC67D1C31E13300998540 /* JsonStore.swift */; };
 		1E97B4EE1C28B260009C4564 /* PersistentStoreFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E97B4ED1C28B260009C4564 /* PersistentStoreFactory.swift */; };
 		1E97B4F01C29B5C6009C4564 /* PropertyListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E97B4EF1C29B5C6009C4564 /* PropertyListStore.swift */; };
+		1ECDB56B1C31F3D40048560F /* SqliteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECDB56A1C31F3D40048560F /* SqliteStore.swift */; };
+		1ECDB5701C31F53A0048560F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECDB56C1C31F4D90048560F /* libsqlite3.tbd */; };
 		DB7D1DC71C24E5400022ADB4 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DB7D1DC61C24E5400022ADB4 /* Settings.bundle */; };
 		DB7D1DC91C25AFB40022ADB4 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D1DC81C25AFB40022ADB4 /* ToDoTableViewController.swift */; };
 		DB7D1DCD1C25B7560022ADB4 /* StringStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D1DCC1C25B7560022ADB4 /* StringStore.swift */; };
@@ -39,6 +41,8 @@
 		1E8FC67D1C31E13300998540 /* JsonStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonStore.swift; sourceTree = "<group>"; };
 		1E97B4ED1C28B260009C4564 /* PersistentStoreFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentStoreFactory.swift; sourceTree = "<group>"; };
 		1E97B4EF1C29B5C6009C4564 /* PropertyListStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyListStore.swift; sourceTree = "<group>"; };
+		1ECDB56A1C31F3D40048560F /* SqliteStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqliteStore.swift; sourceTree = "<group>"; };
+		1ECDB56C1C31F4D90048560F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		DB7D1DC61C24E5400022ADB4 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		DB7D1DC81C25AFB40022ADB4 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
 		DB7D1DCC1C25B7560022ADB4 /* StringStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringStore.swift; sourceTree = "<group>"; };
@@ -55,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ECDB5701C31F53A0048560F /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +94,7 @@
 				1E1F78D11C24C48100282333 /* LaunchScreen.storyboard */,
 				1E1F78D41C24C48100282333 /* Info.plist */,
 				DB7D1DC61C24E5400022ADB4 /* Settings.bundle */,
+				1ECDB56C1C31F4D90048560F /* libsqlite3.tbd */,
 			);
 			path = SavingDataFinalChallenge;
 			sourceTree = "<group>";
@@ -103,6 +109,7 @@
 				1E97B4EF1C29B5C6009C4564 /* PropertyListStore.swift */,
 				DBBF2E041C2DD36B00FD77C1 /* XmlStore.swift */,
 				1E8FC67D1C31E13300998540 /* JsonStore.swift */,
+				1ECDB56A1C31F3D40048560F /* SqliteStore.swift */,
 			);
 			name = Stores;
 			sourceTree = "<group>";
@@ -226,6 +233,7 @@
 				1E97B4EE1C28B260009C4564 /* PersistentStoreFactory.swift in Sources */,
 				DB7D1DCD1C25B7560022ADB4 /* StringStore.swift in Sources */,
 				DBD6CB861C2612F9006E3F17 /* NSCodingStore.swift in Sources */,
+				1ECDB56B1C31F3D40048560F /* SqliteStore.swift in Sources */,
 				1E1F78C91C24C48100282333 /* AppDelegate.swift in Sources */,
 				DB7D1DC91C25AFB40022ADB4 /* ToDoTableViewController.swift in Sources */,
 				1E1F78DB1C24CD4800282333 /* ItemViewController.swift in Sources */,
@@ -343,6 +351,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SavingDataFinalChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SavingDataFinalChallenge/Settings.bundle",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.SavingDataFinalChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +366,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SavingDataFinalChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SavingDataFinalChallenge/Settings.bundle",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.SavingDataFinalChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
