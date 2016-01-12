@@ -24,6 +24,8 @@ class PersistentStoreFactory {
       return XmlStore()
     case 4:
       return JsonStore()
+    case 5:
+      return SqliteStore()
     default:
       return NSCodingStore()
     }

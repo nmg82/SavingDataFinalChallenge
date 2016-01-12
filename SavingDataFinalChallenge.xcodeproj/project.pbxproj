@@ -24,6 +24,7 @@
 		DB7D1DD01C25B7E20022ADB4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D1DCF1C25B7E20022ADB4 /* Item.swift */; };
 		DBBF2E051C2DD36B00FD77C1 /* XmlStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2E041C2DD36B00FD77C1 /* XmlStore.swift */; };
 		DBBF2E081C2DD71C00FD77C1 /* ItemParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2E071C2DD71C00FD77C1 /* ItemParser.swift */; };
+		DBD118F41C4589070094EB6F /* FmdbStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD118F31C4589070094EB6F /* FmdbStore.swift */; };
 		DBD6CB841C26129D006E3F17 /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD6CB831C26129D006E3F17 /* PersistentStore.swift */; };
 		DBD6CB861C2612F9006E3F17 /* NSCodingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD6CB851C2612F9006E3F17 /* NSCodingStore.swift */; };
 		DBD6CB881C271561006E3F17 /* NSCodingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD6CB871C271561006E3F17 /* NSCodingItem.swift */; };
@@ -43,12 +44,14 @@
 		1E97B4EF1C29B5C6009C4564 /* PropertyListStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyListStore.swift; sourceTree = "<group>"; };
 		1ECDB56A1C31F3D40048560F /* SqliteStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqliteStore.swift; sourceTree = "<group>"; };
 		1ECDB56C1C31F4D90048560F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		DB53F3FC1C45423000945A69 /* SavingDataFinalChallenge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SavingDataFinalChallenge-Bridging-Header.h"; sourceTree = "<group>"; };
 		DB7D1DC61C24E5400022ADB4 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		DB7D1DC81C25AFB40022ADB4 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
 		DB7D1DCC1C25B7560022ADB4 /* StringStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringStore.swift; sourceTree = "<group>"; };
 		DB7D1DCF1C25B7E20022ADB4 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		DBBF2E041C2DD36B00FD77C1 /* XmlStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XmlStore.swift; sourceTree = "<group>"; };
 		DBBF2E071C2DD71C00FD77C1 /* ItemParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemParser.swift; sourceTree = "<group>"; };
+		DBD118F31C4589070094EB6F /* FmdbStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FmdbStore.swift; sourceTree = "<group>"; };
 		DBD6CB831C26129D006E3F17 /* PersistentStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
 		DBD6CB851C2612F9006E3F17 /* NSCodingStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSCodingStore.swift; sourceTree = "<group>"; };
 		DBD6CB871C271561006E3F17 /* NSCodingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSCodingItem.swift; sourceTree = "<group>"; };
@@ -92,9 +95,10 @@
 				1E1F78CC1C24C48100282333 /* Main.storyboard */,
 				1E1F78CF1C24C48100282333 /* Assets.xcassets */,
 				1E1F78D11C24C48100282333 /* LaunchScreen.storyboard */,
+				DB53F3FC1C45423000945A69 /* SavingDataFinalChallenge-Bridging-Header.h */,
+				1ECDB56C1C31F4D90048560F /* libsqlite3.tbd */,
 				1E1F78D41C24C48100282333 /* Info.plist */,
 				DB7D1DC61C24E5400022ADB4 /* Settings.bundle */,
-				1ECDB56C1C31F4D90048560F /* libsqlite3.tbd */,
 			);
 			path = SavingDataFinalChallenge;
 			sourceTree = "<group>";
@@ -110,6 +114,7 @@
 				DBBF2E041C2DD36B00FD77C1 /* XmlStore.swift */,
 				1E8FC67D1C31E13300998540 /* JsonStore.swift */,
 				1ECDB56A1C31F3D40048560F /* SqliteStore.swift */,
+				DBD118F31C4589070094EB6F /* FmdbStore.swift */,
 			);
 			name = Stores;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBD118F41C4589070094EB6F /* FmdbStore.swift in Sources */,
 				DBD6CB841C26129D006E3F17 /* PersistentStore.swift in Sources */,
 				DBD6CB881C271561006E3F17 /* NSCodingItem.swift in Sources */,
 				1E97B4F01C29B5C6009C4564 /* PropertyListStore.swift in Sources */,
@@ -349,6 +355,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SavingDataFinalChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -357,6 +364,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.SavingDataFinalChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SavingDataFinalChallenge/SavingDataFinalChallenge-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -364,6 +373,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SavingDataFinalChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -372,6 +382,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.SavingDataFinalChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SavingDataFinalChallenge/SavingDataFinalChallenge-Bridging-Header.h";
 			};
 			name = Release;
 		};
